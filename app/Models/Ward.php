@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Referals extends Model
+class Ward extends Model
 {
-    protected $guarded=[];
+    protected $table='ward';
     use HasFactory;
 }

@@ -13,8 +13,9 @@
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+       
         <!-- convert all form field to html tag 
-        <script  src="{{asset('js/form/formfield.js')}}"></script>-->
+       -->
          <!--  holds all api url
         <script  src="{{asset('js/api.js')}}"></script>-->
          <!--  generate the html tag to be render
@@ -34,12 +35,13 @@
         }
             body{
               
-                height:100%;
+                
                 display:grid;
                 grid-template-rows:min-content, 1fr;
-                grid-template-columns:1fr;
+                grid-template-columns:auto;
                 background:rgb(240,242,245);
 			    position:relative;
+               
                 
             }
            nav .fa-solid{
@@ -87,6 +89,13 @@
              .show{
                 display:block;
             }
+           
+            .content{
+                background:white;
+                margin-top:2em;
+                padding:2em;
+               
+            }
             @media (min-width:900px)  {
                 aside{
                     display:block;
@@ -99,10 +108,10 @@
                 <div style="text-align:center" ><img src="{{asset('images/logo.png')}}"/></div>
                 <ul>
                   
-                    <li><i class="fa-solid fa-bar-chart"></i><a href="">Polling Result</a></li>
-                    <li><i class="fa-solid fa-book"></i><a href="">LGA Result</a></li>
-                    <li><i class="fa-solid fa-upload"></i><a href="">Enter Party Result</a></li>
-                    <li><i class="fa-solid fa-sign-out"></i><a href="">Log Out</a></li>
+                    <li><i class="fa-solid fa-bar-chart"></i><a href="/">Polling Result</a></li>
+                    <li><i class="fa-solid fa-book"></i><a href="/lga_result">LGA Result</a></li>
+                    <li><i class="fa-solid fa-upload"></i><a href="/party">Enter Party Result</a></li>
+                    
                     
                  </ul>
             </aside>
@@ -125,39 +134,8 @@
             
                 </nav>
                 <section class="row">
-                    <div class="col-md-8 offset-md-2" style="background:white;margin:2em" >   
-                    <form>
-  <div class="form-group">
-    <label for="select1">Select Field 1</label>
-    <select class="form-control" id="select1">
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label for="select2">Select Field 2</label>
-    <select class="form-control" id="select2">
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label for="select3">Select Field 3</label>
-    <select class="form-control" id="select3">
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </select>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
- 
-                    </div>
+                
+                     @yield('content')
                 </section>
             </main>
     </body>
