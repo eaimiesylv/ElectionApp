@@ -32,7 +32,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="select1">{{$party->partyname}}</label>
-										<input type="number" class="form-control"  value="8" name="{{$party->partyid}}" required/>
+										<input type="number" class="form-control"  value="" name="{{$party->partyid}}" required/>
 									</div>
 								</div>
 							@endforeach

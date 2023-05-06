@@ -46,7 +46,7 @@ class AnnouncedPollUnitResultController extends Controller
             foreach ($data as $partyname => $score) {
                 $result = new Announced_poll_unit_result;
                 $result->polling_unit_uniqueid = time();
-                $result->party_abbreviation = '$partynamedadadadadadada';
+                $result->party_abbreviation = $partyname;
                 $result->party_score = $score;
                 $result->entered_by_user = 'emmanuel';
                 $result->user_ip_address = $request->ip();
